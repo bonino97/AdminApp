@@ -11,7 +11,9 @@ export class SidebarService {
       icono: 'mdi mdi-gauge',
       submenu: [
         { titulo: 'Dashboard', url: '/dashboard' },
-        { titulo: 'Porcentaje', url: '/porcentaje' }
+        { titulo: 'Porcentaje', url: '/porcentaje' },
+        { titulo: 'Promesas', url: '/promesas' },
+        { titulo: 'Rxjs', url: '/rxjs' }
       ]
     }
   ];
