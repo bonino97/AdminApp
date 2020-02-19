@@ -1,0 +1,41 @@
+<div class="row animated fadeIn">
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Edit Profile</h4>
+                <form ngNativeValidate #f="ngForm" (ngSubmit)="update(f.value)" class="form p-t-20">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input [(ngModel)]="usuario.nombre" name="nombre" type="text" required class="form-control" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input [(ngModel)]="usuario.email" name="email" type="email" class="form-control" required placeholder="Enter email">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Edit Image</h4>
+                <img src="" alt="">
+                <input (change)="seleccionImagen( $event )" type="file">
+                <br>
+                <br>
+                <button (click)="cambiarImagen(  )" type="button" class="btn btn-success waves-effect waves-light m-r-10">
+                    <i class="fa fa-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
